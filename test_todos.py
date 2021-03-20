@@ -17,15 +17,6 @@ def test_task_manager_starts_with_no_tasks():
     assert task_manager.tasks == []
 
 
-def test_parse_add():
-    command = "+ first task"
-    task_manager = TaskManager()
-    action = task_manager.parse(command)
-
-    assert action.name == "add"
-    assert action.description == "first task"
-
-
 def test_parse_delete():
     # Adding the task.
     command = "+ first task"
